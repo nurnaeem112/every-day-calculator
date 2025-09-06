@@ -1,7 +1,7 @@
 :root{--bg:#fff;--text:#12324b;--accent:#0d3b66;--muted:#6b7b8a;--card:#fff}
 *{box-sizing:border-box}
 body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}
-.container{max-width:1100px;margin:0 auto;padding:18px}
+.container{width: 90%;max-width:1100px;margin:0 auto;padding:18px}
 .topbar{background:var(--accent);color:white}
 .topbar .container{display:flex;align-items:center;justify-content:space-between}
 .brand{font-weight:700}
