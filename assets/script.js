@@ -1,1 +1,0 @@
-document.addEventListener('DOMContentLoaded', ()=>{document.querySelectorAll('.sidebar a').forEach(a=>{if(a.href===location.href) a.classList.add('active')});document.querySelectorAll('#year,#year2,#year3,#year4').forEach(e=>e&&(e.textContent=new Date().getFullYear()));});
