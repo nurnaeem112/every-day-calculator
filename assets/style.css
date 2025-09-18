@@ -1,29 +1,181 @@
-:root{--bg:#fff;--text:#12324b;--accent:#281D87;--muted:#6b7b8a;--card:#fff}
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}
-.container{max-width:1100px;margin:0 auto;padding:18px}
-.topbar{background:var(--accent);color:white}
-.topbar .container{display:flex;align-items:center;justify-content:space-between}
-.brand{font-weight:700}
-.topnav a{color:white;text-decoration:none;margin-left:12px}
-.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-top:16px}
-.tile{display:block;padding:18px;border-radius:10px;background:#f6fbff;border:1px solid #e6f0fa;color:var(--accent);text-decoration:none;font-weight:600;text-align:center}
-.layout{display:flex;gap:20px}
-.sidebar{width:260px;background:#fbfdff;padding:12px;border-radius:10px;border:1px solid #eef6ff;height:calc(100vh - 160px);position:sticky;top:80px;overflow:auto}
-.sidebar h3{margin-top:0;color:var(--accent)}
-.sidebar ul{list-style:none;padding:0;margin:8px 0}
-.sidebar li{margin:6px 0}
-.sidebar a{display:block;padding:8px 6px;color:var(--text);text-decoration:none;border-radius:6px}
-.sidebar a.active, .sidebar a:hover{background:#e9f3ff;color:var(--accent)}
-main{flex:1;background:var(--card);padding:20px;border-radius:10px;border:1px solid #eef6ff}
-.right-slot{width:300px;margin-left:20px}
-.ad-placeholder{background:#f3f7fb;border:1px dashed #cfe6ff;padding:12px;text-align:center;border-radius:8px;color:var(--muted);margin:12px 0;width: 300px;height: 250px;}
-form label{display:block;margin:8px 0}
-input, select, textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #d7e9fb}
-button{background:var(--accent);color:white;padding:10px 14px;border-radius:8px;border:none;cursor:pointer}
-.result{background:#f6fbff;border:1px solid #e1f0ff;padding:12px;border-radius:8px;margin-top:10px}
-footer.sitefoot{padding:18px;text-align:center;color:var(--muted);border-top:1px solid #f0f6fb;margin-top:24px}
-@media(max-width:1000px) {
+:root {
+  --bg: #f8fafc; /* Light slate background for modern look */
+  --text: #1e293b; /* Dark slate text for readability */
+  --accent: #001f52; /* Vibrant blue for primary elements */
+  --muted: #64748b; /* Softer slate for secondary text */
+  --card: #ffffff; /* Clean white for cards */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px;
+}
+
+.topbar {
+  background: var(--accent);
+  color: white;
+}
+
+.topbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-weight: 700;
+}
+
+.topnav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 12px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.tile {
+  display: block;
+  padding: 18px;
+  border-radius: 10px;
+  background: #f1f5f9; /* Soft gray for tiles */
+  border: 1px solid #e2e8f0; /* Light border */
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+}
+
+.layout {
+  display: flex;
+  gap: 20px;
+}
+
+.sidebar {
+  width: 260px;
+  background: #f1f5f9; /* Matches tile background */
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  height: calc(100vh - 160px);
+  position: sticky;
+  top: 80px;
+  overflow: auto;
+}
+
+.sidebar h3 {
+  margin-top: 0;
+  color: var(--accent);
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0;
+}
+
+.sidebar li {
+  margin: 6px 0;
+}
+
+.sidebar a {
+  display: block;
+  padding: 8px 6px;
+  color: var(--text);
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.sidebar a.active,
+.sidebar a:hover {
+  background: #dbeafe; /* Light blue hover state */
+  color: var(--accent);
+}
+
+main {
+  flex: 1;
+  background: var(--card);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+}
+
+.right-slot {
+  width: 300px;
+  margin-left: 20px;
+}
+
+.ad-placeholder {
+  background: #f1f5f9; /* Matches tile background */
+  border: 1px dashed #bfdbfe; /* Light blue dashed border */
+  padding: 12px;
+  text-align: center;
+  border-radius: 8px;
+  color: var(--muted);
+  margin: 12px 0;
+  width: 300px;
+  height: 250px;
+}
+
+form label {
+  display: block;
+  margin: 8px 0;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #bfdbfe; /* Light blue border */
+}
+
+button {
+  background: var(--accent);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.result {
+  background: #f1f5f9; /* Matches tile background */
+  border: 1px solid #dbeafe; /* Light blue border */
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+footer.sitefoot {
+  padding: 18px;
+  text-align: center;
+  color: var(--muted);
+  border-top: 1px solid #e2e8f0; /* Light border */
+  margin-top: 24px;
+}
+
+@media (max-width: 1000px) {
   .layout {
     flex-direction: column;
   }
@@ -50,56 +202,81 @@ footer.sitefoot{padding:18px;text-align:center;color:var(--muted);border-top:1px
     display: inline-block;
   }
 
+  /* Hide the topnav links on mobile */
+  .topnav {
+    display: none;
+  }
+
   .right-slot {
     width: 100%;
     margin-left: 0;
   }
 }
 
+
 .menu-btn {
-  display: none; /* hidden by default */
-  font-size: 24px;
-  background: var(--accent);
-  color: white;
+  display: none;        /* hidden by default (desktop) */
+  font-size: 26px;
+  background: transparent;
+  color: white;         /* visible on dark topbar */
   border: none;
-  padding: 8px 12px;
-  margin-left: 10px;
   cursor: pointer;
-  border-radius: 6px;
+  margin-left: 12px;
 }
-@media(max-width: 768px) {
+
+/* Show button only on mobile */
+@media (max-width: 1000px) {
+  .menu-btn {
+    display: inline-block;
+  }
+
+  .topnav {
+    display: none; /* hide desktop nav */
+  }
+}
+
+
+@media (max-width: 768px) {
   .calc-layout {
-    flex-direction: column;   /* stack vertically */
+    flex-direction: column; /* stack vertically */
   }
   .right-slot {
-    width: 100%;              /* make ad take full width */
+    width: 100%; /* make ad take full width */
     margin-left: 0;
   }
 }
+
 .calc-layout {
   display: flex;
   gap: 20px; /* spacing between calculator and ad */
   align-items: flex-start; /* optional: aligns top edges */
 }
-/* Base font size (desktop default) */
-body {
-  font-size: 16px;
-  line-height: 1.4;
-}
 
 /* Headings for desktop */
-h1 { font-size: 36px; }
-h2 { font-size: 28px; }
-h3 { font-size: 22px; }
+h1 {
+  font-size: 36px;
+}
+h2 {
+  font-size: 28px;
+}
+h3 {
+  font-size: 22px;
+}
 
 /* Tablet adjustments */
 @media (max-width: 1024px) {
   body {
     font-size: 15px;
   }
-  h1 { font-size: 32px; }
-  h2 { font-size: 24px; }
-  h3 { font-size: 20px; }
+  h1 {
+    font-size: 32px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 20px;
+  }
 }
 
 /* Mobile adjustments */
@@ -107,7 +284,168 @@ h3 { font-size: 22px; }
   body {
     font-size: 14px;
   }
-  h1 { font-size: 26px; }
-  h2 { font-size: 20px; }
-  h3 { font-size: 18px; }
+  h1 {
+    font-size: 26px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+}
+
+/* Mobile overlay */
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 900;
+}
+
+
+
+/* Scientific Calculator Styles */
+.calculator {
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  width: 320px;
+}
+
+.display {
+  width: 100%;
+  height: 60px;
+  background: #f8fafc; /* Matches root background */
+  text-align: right;
+  font-size: 28px;
+  border: 1px solid #e2e8f0; /* Light border */
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 15px;
+  overflow-x: auto;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+button {
+  height: 50px;
+  font-size: 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+.red {
+  background: #b9b9b9;
+  color: rgb(0, 0, 0);
+}
+
+.red:hover {
+  background: #979797; /* Slightly darker blue */
+}
+
+.gray {
+  background: #b9b9b9;
+  color: rgb(0, 0, 0);
+}
+
+.gray:hover {
+  background: #979797; /* Slightly darker blue */
+}
+
+.gray-font {
+  background: #b9b9b9;
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+}
+
+.gray-font:hover {
+  background: #979797; /* Slightly darker blue */
+}
+.equal {
+  background: #001f52; /* Vibrant red for equal button */
+  color: white;
+  grid-column: span 1;
+}
+
+.equal:hover {
+  background: #001f52; /* Darker red on hover */
+}
+
+/* ... (all previous CSS remains unchanged) */
+
+/* Add this new rule for the "7" button */
+.number {
+  background: #edeeee; /* Soft blue for modern look */
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+}
+
+.number:hover {
+  background: #cccccc; /* Slightly darker blue on hover */
+}
+
+/* ... (rest of the CSS remains unchanged) */
+
+.number-0 {
+  background: #edeeee; /* Soft blue for modern look */
+  color: rgb(0, 0, 0);
+  grid-column: span 2;
+  font-size: 24px;
+}
+
+.number-0:hover {
+  background: #cccccc; /* Slightly darker blue on hover */
+}
+
+/* calculator centering */
+.center {
+      width: 320px;               /* must have a width */
+      margin: 0 auto;             /* auto left + right margins */
+      background: rgba(255, 255, 255, 0);
+      padding: 0px;
+      text-align: center;
+    }
+
+
+
+
+    .sidebar-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: 900;
+}
+
+.sidebar-overlay.show {
+  display: block;
+}
+
+
+.sidebar .mobile-only {
+  display: none !important;   /* force hidden on desktop */
+}
+
+@media (max-width: 1000px) {
+  .sidebar .mobile-only {
+    display: block !important; /* force visible on mobile */
+  }
 }
